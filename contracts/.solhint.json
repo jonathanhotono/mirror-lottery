@@ -1,0 +1,20 @@
+{
+  "extends": "solhint:recommended",
+  "rules": {
+    "compiler-version": ["error", "0.8.36"],
+    "func-visibility": "off",
+    "func-name-mixedcase": "off",
+    "function-max-lines": "off",
+    "gas-indexed-events": "off",
+    "gas-strict-inequalities": "off",
+    "gas-custom-errors": "error",
+    "immutable-vars-naming": "off",
+    "max-line-length": "off",
+    "no-console": "error",
+    "not-rely-on-time": "off",
+    "one-contract-per-file": "off",
+    "ordering": "off",
+    "use-natspec": "off",
+    "var-name-mixedcase": "off"
+  }
+}

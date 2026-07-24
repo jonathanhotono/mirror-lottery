@@ -1,0 +1,35 @@
+{
+  "name": "@mirror-lottery/contracts",
+  "version": "2.0.0-testnet",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "build": "bash scripts/hardhat-env.sh compile",
+    "test": "bash scripts/hardhat-env.sh test nodejs",
+    "test:all": "bash scripts/hardhat-env.sh test",
+    "test:coverage": "bash scripts/hardhat-env.sh test nodejs",
+    "lint": "solhint --disc --noPoster \"src/**/*.sol\"",
+    "typecheck": "tsc --noEmit",
+    "deploy:base-sepolia": "bash scripts/hardhat-env.sh run scripts/deploy.ts --network baseSepolia",
+    "deploy:arbitrum-sepolia": "bash scripts/hardhat-env.sh run scripts/deploy.ts --network arbitrumSepolia",
+    "check:size": "node scripts/check-size.mjs",
+    "audit:prod": "npm audit --omit=dev --audit-level=high",
+    "verify": "npm run lint && npm run build && npm run typecheck && npm test && npm run check:size && npm run audit:prod",
+    "clean": "bash scripts/hardhat-env.sh clean"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "5.6.1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "5.0.7",
+    "@types/node": "22.19.19",
+    "hardhat": "3.11.1",
+    "solc": "0.8.36",
+    "solhint": "6.2.3",
+    "typescript": "5.9.3",
+    "viem": "2.55.8"
+  }
+}
