@@ -1,0 +1,11 @@
+artifacts/
+cache/
+coverage/
+.hardhat-config/
+.hardhat-cache/
+.hardhat-data/
+node_modules/
+typechain-types/
+.env
+.env.*
+!.env.example
